@@ -25,7 +25,7 @@ public class CheckResult {
      * @return False if zero!=0.
      */
     public static boolean checkZero(double zero){
-         if(!(Double.isInfinite(zero))) {	
+         if(new Double(1.0/zero).isInfinite()) {	
             System.out.println(Helper.DIVISION_BY_ZERO);
            return true;
          } else {
