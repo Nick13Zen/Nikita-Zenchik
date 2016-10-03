@@ -1,12 +1,12 @@
-
+/**
+ * The class contain some <code>String</code> constants for user info, help
+ * and some errors. It contain command line commands for program.
+ *
+ * @author Nikuta Zenchik
+ */
 public class Helper {
-	/**
-	 * The class contain some <code>String</code> constants for user info, help
-	 * and some errors. It contain command line commands for program.
-	 *
-	 * @author Nikuta Zenchik
-	 */
-	public static final String ABOUT = "The program perform " +
+
+    public static final String ABOUT = "The program perform " +
             "arithmetic  operation like sum, subtraction, multiplication and " +
             "division between two input number and print it. \n " +
             "Only two numbers are allowed. Separator between integral and " +

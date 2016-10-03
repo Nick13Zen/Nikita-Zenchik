@@ -6,7 +6,6 @@
  * If <code>String</code> is empty than print "Hello, User!".
  * 
  * @author Nikita Zenchik
- * 
  */
 
 public class Main {
@@ -15,10 +14,12 @@ public class Main {
 	 * @params args array with parameter as User Name.
 	 */
 	public static void main(String[] args) {
-        if(args.length>0)
+        if(args.length>0){
             System.out.println("Hello, " + args[0] + "!");
-        else
+        }
+        else{
             System.out.println("Hello, User!");
+        }
     }
 }
 	

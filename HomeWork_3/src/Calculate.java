@@ -1,8 +1,8 @@
-     /**
-	 * The class contain some methods for sum, subtraction, multiplication and division.
-	 * 
-	 * @author Nikuta Zenchik
-	 */
+/**
+ * The class contain some methods for sum, subtraction, multiplication and division.
+ * 
+ * @author Nikuta Zenchik
+ */
 public class Calculate {
 	
     /**

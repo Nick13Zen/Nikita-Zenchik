@@ -8,7 +8,6 @@
  * @author Nikita Zenchik
  */ 
 public class Main { 
-
     /**
      * Print message and receive two numbers from console and print sum,
      * subtraction,
@@ -21,25 +20,22 @@ public class Main {
           try {
         	  if(CheckResult.checkEmpty(args)){
         		  System.exit(0);
-        	  }
-        	  else{
+        	  } else{
                   String stringArg1 = args[0];
                   if(CheckResult.checkHelp(args[0])){
                 	  System.exit(0);
-                  }
-                  else{
+                  } else{
                       String stringArg2 = args[1];
                       double arg1 = parsData(stringArg1);
                       double arg2 = parsData(stringArg2);
-                      if(Double.isInfinite(arg1) &&
-                        Double.isInfinite(arg2)) {
+                      if(Double.isInfinite(arg1) || Double.isInfinite(arg2)) {
                 	    System.out.println(Helper.BOUNDS_ERROR_INPUT);
                         System.exit(0);
-                      } else {
+                      } else{
                 	    printResult(arg1, arg2);
                         }
-        	      }
-        	  }
+        	        }
+        	    } 
             
           } catch (Exception exp) {
                 System.out.println(Helper.ERROR_NOT_A_NUMBER);
@@ -65,8 +61,9 @@ public class Main {
         result = Calculate.multiplication(arg1, arg2);
         System.out.println("Multiplication" + " = " + CheckResult.check(result));
 
-        if(CheckResult.checkZero(arg2))
+        if(CheckResult.checkZero(arg2)){
         	System.exit(0);
+        }
         else{
         result = Calculate.division(arg1, arg2);
         System.out.println("Division" + " = " + CheckResult.check(result));
