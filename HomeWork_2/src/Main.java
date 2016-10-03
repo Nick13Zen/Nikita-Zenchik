@@ -9,18 +9,15 @@
  */
 
 public class Main {
-	/**
-	 * The method that gets user name from console and prints Hello Name.
-	 * @params args array with parameter as User Name.
-	 */
-	public static void main(String[] args) {
+    /**
+     * The method that gets user name from console and prints Hello Name.
+     * @params args array with parameter as User Name.
+     */
+    public static void main(String[] args) {
         if(args.length>0){
-            System.out.println("Hello, " + args[0] + "!");
-        }
-        else{
+           System.out.println("Hello, " + args[0] + "!");
+        } else {
             System.out.println("Hello, User!");
         }
     }
 }
-	
-

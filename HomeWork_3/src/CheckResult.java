@@ -9,13 +9,13 @@ public class CheckResult {
      */
     public static String check(double number) {
         if(Double.isNaN(number)) {
-            return Helper.NAN_NUMBER;
+           return Helper.NAN_NUMBER;
         }
         if(!Double.isInfinite(number)) {
-            return String.valueOf(number);
+           return String.valueOf(number);
         } else {
-            return Helper.BOUNDS_ERROR;  
-        }
+               return Helper.BOUNDS_ERROR;  
+          }
     }
     /**
      * The method check if number is zero.
@@ -25,16 +25,15 @@ public class CheckResult {
      * @return False if zero!=0.
      */
     public static boolean checkZero(double zero){
-         if(zero == 0) {	
-           System.out.println(Helper.DIVISION_BY_ZERO);
+         if(!(Double.isInfinite(zero))) {	
+            System.out.println(Helper.DIVISION_BY_ZERO);
            return true;
-         }
-         else{
-              return false;
+         } else {
+                return false;
          }
     }
     /**
-     * The method check if line is (-help).
+     * The method check if line is "-help".
      * 
      * @param line string line.
      * @return True if line=="-help".
@@ -42,12 +41,11 @@ public class CheckResult {
      */
     public static boolean checkHelp(String line){
         if(line.equals("-help")) {
-            System.out.println(Helper.ABOUT);
+           System.out.println(Helper.ABOUT);
             return true;
-            }
-        else{
-            return false;
-            }
+            } else {
+                   return false;
+              }
     }
     /**
      * The method check if line is empty.
@@ -57,10 +55,10 @@ public class CheckResult {
      */
     public static boolean checkEmpty(String[] line){
         if(line.length==0) {
-            System.out.println(Helper.EMPTY);
+           System.out.println(Helper.EMPTY);
         return true;
-      } else{
-            return false;
+        } else {
+               return false;
         }
     }
 }
