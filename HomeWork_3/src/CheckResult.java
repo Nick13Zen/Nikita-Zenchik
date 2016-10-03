@@ -14,8 +14,8 @@ public class CheckResult {
         if(!Double.isInfinite(number)) {
            return String.valueOf(number);
         } else {
-               return Helper.BOUNDS_ERROR;  
-          }
+           return Helper.BOUNDS_ERROR;  
+        }
     }
     /**
      * The method check if number is zero.
@@ -25,11 +25,11 @@ public class CheckResult {
      * @return False if zero!=0.
      */
     public static boolean checkZero(double zero){
-         if(new Double(1.0/zero).isInfinite()) {	
-            System.out.println(Helper.DIVISION_BY_ZERO);
+        if(new Double(1.0/zero).isInfinite()) {	
+           System.out.println(Helper.DIVISION_BY_ZERO);
            return true;
          } else {
-                return false;
+           return false;
          }
     }
     /**
@@ -42,10 +42,10 @@ public class CheckResult {
     public static boolean checkHelp(String line){
         if(line.equals("-help")) {
            System.out.println(Helper.ABOUT);
-            return true;
-            } else {
-                   return false;
-              }
+           return true;
+        } else {
+           return false;
+        }
     }
     /**
      * The method check if line is empty.
@@ -56,9 +56,9 @@ public class CheckResult {
     public static boolean checkEmpty(String[] line){
         if(line.length==0) {
            System.out.println(Helper.EMPTY);
-        return true;
+           return true;
         } else {
-               return false;
+           return false;
         }
     }
 }
