@@ -13,10 +13,10 @@ public class Main {
      * Print message and receive three numbers from console.
      */
     public static void main(String[] args) {
-    	Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         try {
-            System.out.println(Helper.START);
-            System.out.println(Helper.ABOUT);
+            System.out.println(Message.START);
+            System.out.println(Message.ABOUT);
             Double arg1 = input.nextDouble();
             if(checkEmpty(arg1)){
                System.exit(0);
@@ -26,7 +26,7 @@ public class Main {
                solve(arg1 , arg2 , arg3);
             }
         } catch (Exception exp) {
-            System.out.println(Helper.ERROR_NOT_A_NUMBER);
+            System.out.println(Message.ERROR_NOT_A_NUMBER);
         }
     }
     /**
@@ -36,7 +36,7 @@ public class Main {
      */
     public static boolean checkEmpty(Double Arg1){
         if(Arg1.isNaN()) {
-           System.out.println(Helper.EMPTY);
+           System.out.println(Message.EMPTY);
            return true;
         } else {
            return false;
@@ -52,19 +52,19 @@ public class Main {
     public static void solve(double arg1,double arg2, double arg3){
         if(((arg1+arg2)>arg3) || ((arg1+arg3)>arg2) || ((arg3+arg2)>arg1)){
             if((arg1==arg2) && (arg2==arg3) && (arg1==arg3)){
-                System.out.println(Helper.EQUILATERAL);
+                System.out.println(Message.EQUILATERAL);
                 System.exit(0);
             } else {
                 if((arg1==arg2) || (arg2==arg3) || (arg1==arg3)){
-                    System.out.println(Helper.ISOSCELES);
+                    System.out.println(Message.ISOSCELES);
                     System.exit(0);
                 } else {
-                	System.out.println(Helper.SIMPLE);
+                	System.out.println(Message.SIMPLE);
                     System.exit(0);
                 }
             }
         } else {
-            System.out.println(Helper.NOT_A_TRIANGULAR);
+            System.out.println(Message.NOT_A_TRIANGULAR);
             System.exit(0);
         }
     }
