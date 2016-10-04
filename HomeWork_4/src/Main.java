@@ -12,6 +12,11 @@ public class Main {
     /**
      * Print message and receive three numbers from console.
      */
+    // Constants
+    static final int CONSTANT1 = 4;
+    static final int CONSTANT2 = 2;
+    static final int CONSTANT3 = 0;
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         try {
@@ -79,19 +84,19 @@ public class Main {
      * @param arg3 double value.
      */
     public static void solveDiscriminant(double arg1, double arg2, double arg3){
-        double D = Math.pow(arg2, 2)-4*arg1*arg3;
+        double D = Math.pow(arg2, CONSTANT2)-CONSTANT1*arg1*arg3;
         if(!(Double.isInfinite(D))) {
             if(checkZero(D)){
                 System.out.println(Message.ONE_ANSWER);
-                System.out.println(check(-(arg2 / 2 * arg1)));
+                System.out.println(check(-(arg2 / CONSTANT2 * arg1)));
             } else { 
-                   if(D<0){
+                   if(D<CONSTANT3){
                       System.out.println(Message.LESS_THEN_ZERO);
                       System.exit(0);
                 } else {
                 	System.out.println(Message.TWO_ANSWER);
-                    System.out.println(check((-arg2+Math.sqrt(D))/(2 * arg1)));
-                    System.out.println(check((-arg2-Math.sqrt(D))/(2 * arg1)));
+                    System.out.println(check((-arg2+Math.sqrt(D))/(CONSTANT2 * arg1)));
+                    System.out.println(check((-arg2-Math.sqrt(D))/(CONSTANT2 * arg1)));
                 }
             }
          } else {
