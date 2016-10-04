@@ -1,4 +1,9 @@
-
+/**
+ * The class contain some <code>String</code> constants for user info, help
+ * and some errors. It contain command line commands for program.
+ *
+ * @author Nikuta Zenchik
+ */
 public class Helper {
 
     public static final String ABOUT = "The program solves the equation like ax^2 + bx + c = 0.";
