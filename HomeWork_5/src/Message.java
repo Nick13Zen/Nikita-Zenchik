@@ -25,6 +25,8 @@ public class Message {
     public static final String NAN_NUMBER = "Sorry, we can't calculate that " +
             "value.";
 
+    public static final String AGR_ZERO = "One or more arguments are zero.";
+
     public static final String EQUILATERAL = "Equilateral triangle.";
 
     public static final String ISOSCELES = "Isosceles triangle.";
